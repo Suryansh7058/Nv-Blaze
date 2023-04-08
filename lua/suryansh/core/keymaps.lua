@@ -12,6 +12,12 @@ local opts = { noremap = true, silent = true }
 -- use jk to exit insert mode
 keymap.set("i", "jk", "<ESC>")
 
+-- use Ctrl + S to save in normal mode
+keymap.set("i", "<C-s>", "<ESC> :w<CR> h i")
+
+-- use Ctrl + S to save in normal mode
+keymap.set("n", "<C-s>", ":w<CR>")
+
 -- clear search highlights
 keymap.set("n", "<leader>nh", ":nohl<CR>")
 
