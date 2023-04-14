@@ -56,4 +56,5 @@ cmp.setup({
 			ellipsis_char = "...",
 		}),
 	},
+	-- { confirmation = { completeopt = "menu,menuone,noinsert" } },
 })
