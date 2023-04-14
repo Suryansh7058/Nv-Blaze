@@ -14,5 +14,7 @@
 1b. If you're using neovim for the first time create an nvim folder inside ~/.config folder 
         cd ~
         mkdir nvim
+<br/>
+
 2. run the following command 
   `git clone https://github.com/Suryansh7058/Nv-Blaze.git ~/.config/nvim --depth 1 && nvim`
