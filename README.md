@@ -3,7 +3,8 @@
 
 1a. If you already use an nvim configuration run the following command.
     # required
-        mv ~/.config/nvim ~/.config/nvim.bak
+        
+            mv ~/.config/nvim ~/.config/nvim.bak
 
     # optional but recommended
         mv ~/.local/share/nvim ~/.local/share/nvim.bak
