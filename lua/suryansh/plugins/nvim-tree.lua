@@ -35,13 +35,14 @@ nvimtree.setup({
 	-- 	git = {
 	-- 		ignore = false,
 	-- 	},
+	indent_markers = true,
 })
 -- Enable nvim-treesitter syntax highlighting and matching
-require("nvim-treesitter.configs").setup({
-	highlight = {
-		enable = true,
-	},
-	matchup = {
-		enable = true,
-	},
-})
+-- require("nvim-treesitter.configs").setup({
+-- 	highlight = {
+-- 		enable = true,
+-- 	},
+-- 	matchup = {
+-- 		enable = true,
+-- 	},
+-- })

@@ -107,6 +107,8 @@ return packer.startup(function(use)
 
 	-- tabline
 	use({ "romgrk/barbar.nvim", requires = "nvim-web-devicons" })
+	-- connector lines
+	use("lukas-reineke/indent-blankline.nvim")
 	-- which-key
 	-- Lua
 	-- use({
