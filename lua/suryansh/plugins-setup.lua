@@ -109,8 +109,9 @@ return packer.startup(function(use)
 	use({ "romgrk/barbar.nvim", requires = "nvim-web-devicons" })
 	-- connector lines
 	use("lukas-reineke/indent-blankline.nvim")
+	use("echasnovski/mini.indentscope")
+
 	-- which-key
-	-- Lua
 	-- use({
 	-- 	"folke/which-key.nvim",
 	-- 	config = function()

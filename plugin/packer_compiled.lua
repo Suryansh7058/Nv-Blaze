@@ -159,6 +159,11 @@ _G.packer_plugins = {
     path = "/Users/suryanshsingh/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
+  ["mini.indentscope"] = {
+    loaded = true,
+    path = "/Users/suryanshsingh/.local/share/nvim/site/pack/packer/start/mini.indentscope",
+    url = "https://github.com/echasnovski/mini.indentscope"
+  },
   nightfly = {
     loaded = true,
     path = "/Users/suryanshsingh/.local/share/nvim/site/pack/packer/start/nightfly",
