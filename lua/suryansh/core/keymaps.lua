@@ -13,7 +13,7 @@ local opts = { noremap = true, silent = true }
 keymap.set("i", "jk", "<ESC>")
 
 -- use Ctrl + S to save in normal mode
-keymap.set("i", "<C-s>", "<ESC> :w<CR> h i")
+keymap.set("i", "<C-s>", "<ESC> :w<CR>")
 
 -- use Ctrl + S to save in normal mode
 keymap.set("n", "<C-s>", ":w<CR>")

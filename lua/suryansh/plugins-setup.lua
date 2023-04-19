@@ -109,8 +109,16 @@ return packer.startup(function(use)
 	use({ "romgrk/barbar.nvim", requires = "nvim-web-devicons" })
 	-- connector lines
 	use("lukas-reineke/indent-blankline.nvim")
+	-- mini.nvim modules
 	use("echasnovski/mini.indentscope")
+	use("echasnovski/mini.animate")
 
+	-- Startup Page
+	use({
+		"glepnir/dashboard-nvim",
+		requires = { "nvim-tree/nvim-web-devicons" },
+	})
+	--
 	-- which-key
 	-- use({
 	-- 	"folke/which-key.nvim",

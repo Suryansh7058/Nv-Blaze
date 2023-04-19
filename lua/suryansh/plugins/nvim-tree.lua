@@ -35,7 +35,7 @@ nvimtree.setup({
 	-- 	git = {
 	-- 		ignore = false,
 	-- 	},
-	indent_markers = true,
+	-- indent_markers = true,
 })
 -- Enable nvim-treesitter syntax highlighting and matching
 -- require("nvim-treesitter.configs").setup({
