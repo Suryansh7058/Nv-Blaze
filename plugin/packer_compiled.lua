@@ -109,6 +109,12 @@ _G.packer_plugins = {
     path = "/Users/suryanshsingh/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["codeium.nvim"] = {
+    config = { "\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\fcodeium\frequire\0" },
+    loaded = true,
+    path = "/Users/suryanshsingh/.local/share/nvim/site/pack/packer/start/codeium.nvim",
+    url = "https://github.com/jcdickinson/codeium.nvim"
+  },
   ["dashboard-nvim"] = {
     loaded = true,
     path = "/Users/suryanshsingh/.local/share/nvim/site/pack/packer/start/dashboard-nvim",
@@ -128,6 +134,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/suryanshsingh/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
+  },
+  ["http.nvim"] = {
+    loaded = true,
+    path = "/Users/suryanshsingh/.local/share/nvim/site/pack/packer/start/http.nvim",
+    url = "https://github.com/jcdickinson/http.nvim"
   },
   ["indent-blankline.nvim"] = {
     loaded = true,
@@ -241,6 +252,11 @@ _G.packer_plugins = {
     path = "/Users/suryanshsingh/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["pretty-fold.nvim"] = {
+    loaded = true,
+    path = "/Users/suryanshsingh/.local/share/nvim/site/pack/packer/start/pretty-fold.nvim",
+    url = "https://github.com/anuvyklack/pretty-fold.nvim"
+  },
   ["telescope-fzf-native.nvim"] = {
     loaded = true,
     path = "/Users/suryanshsingh/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim",
@@ -284,6 +300,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: codeium.nvim
+time([[Config for codeium.nvim]], true)
+try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\fcodeium\frequire\0", "config", "codeium.nvim")
+time([[Config for codeium.nvim]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
 vim.cmd [[ packadd nvim-treesitter ]]

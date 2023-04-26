@@ -113,11 +113,43 @@ return packer.startup(function(use)
 	use("echasnovski/mini.indentscope")
 	use("echasnovski/mini.animate")
 
+	--Codemium AI
+	use({
+		"jcdickinson/http.nvim",
+		run = "cargo build --workspace --release",
+	})
+
+	use({
+		"jcdickinson/codeium.nvim",
+		requires = {
+			"jcdickinson/http.nvim",
+			"nvim-lua/plenary.nvim",
+			"hrsh7th/nvim-cmp",
+		},
+		config = function()
+			require("codeium").setup({})
+		end,
+	}) -- {{{1
+
 	-- Startup Page
 	use({
 		"glepnir/dashboard-nvim",
 		requires = { "nvim-tree/nvim-web-devicons" },
 	})
+	use({
+		"jcdickinson/codeium.nvim",
+		event = "InsertEnter",
+		cmd = "Codeium",
+		requires = {
+			"nvim-lua/plenary.nvim",
+			"hrsh7th/nvim-cmp",
+		},
+		config = function()
+			-- Your configuration code here
+		end,
+	})
+	-- AI
+
 	--
 	-- which-key
 	-- use({
@@ -130,10 +162,9 @@ return packer.startup(function(use)
 	-- 			-- or leave it empty to use the default settings
 	-- 			-- refer to the configuration section below
 	-- 		})
-	-- 	end,
-	-- })
-
-	-- rest-nvim
+	use({
+		"anuvyklack/pretty-fold.nvim",
+	})
 	-- auto closing
 	use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes, etc...
 	use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) -- autoclose tags
