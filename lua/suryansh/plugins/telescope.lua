@@ -20,6 +20,7 @@ telescope.setup({
 			"package%-lock.json",
 			"package-lock.json",
 			"yarn.lock",
+			"build/",
 		},
 		mappings = {
 			i = {

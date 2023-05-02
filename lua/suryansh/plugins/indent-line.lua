@@ -14,6 +14,8 @@ require("indent_blankline").setup({
 	show_current_context = true,
 	show_current_context_start = true,
 	char = "┊",
+	enabled = true,
+	colored_indent_levels = false,
 	char_highlight_list = {
 		-- "indentblanklineindent1",
 		-- "indentblanklineindent2",

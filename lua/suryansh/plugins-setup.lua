@@ -119,18 +119,28 @@ return packer.startup(function(use)
 		run = "cargo build --workspace --release",
 	})
 
+	-- use({
+	-- 	"jcdickinson/codeium.nvim",
+	-- 	requires = {
+	-- 		"jcdickinson/http.nvim",
+	-- 		"nvim-lua/plenary.nvim",
+	-- 		"hrsh7th/nvim-cmp",
+	-- 	},
+	-- 	config = function()
+	-- 		require("codeium").setup({})
+	-- 	end,
+	-- }) -- {{{1
+	-- stay in place
 	use({
-		"jcdickinson/codeium.nvim",
-		requires = {
-			"jcdickinson/http.nvim",
-			"nvim-lua/plenary.nvim",
-			"hrsh7th/nvim-cmp",
-		},
+		"gbprod/stay-in-place.nvim",
 		config = function()
-			require("codeium").setup({})
+			require("stay-in-place").setup({
+				-- your configuration comes here
+				-- or leave it empty to use the default settings
+				-- refer to the configuration section below
+			})
 		end,
-	}) -- {{{1
-
+	})
 	-- Startup Page
 	use({
 		"glepnir/dashboard-nvim",
@@ -164,6 +174,17 @@ return packer.startup(function(use)
 	-- 		})
 	use({
 		"anuvyklack/pretty-fold.nvim",
+	}) -- Packer
+	use({
+		"folke/noice.nvim",
+		requires = {
+			-- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+			"MunifTanjim/nui.nvim",
+			-- OPTIONAL:
+			--   `nvim-notify` is only needed, if you want to use the notification view.
+			--   If not available, we use `mini` as the fallback
+			"rcarriga/nvim-notify",
+		},
 	})
 	-- auto closing
 	use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes, etc...
