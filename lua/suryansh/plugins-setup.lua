@@ -119,17 +119,17 @@ return packer.startup(function(use)
 		run = "cargo build --workspace --release",
 	})
 
-	-- use({
-	-- 	"jcdickinson/codeium.nvim",
-	-- 	requires = {
-	-- 		"jcdickinson/http.nvim",
-	-- 		"nvim-lua/plenary.nvim",
-	-- 		"hrsh7th/nvim-cmp",
-	-- 	},
-	-- 	config = function()
-	-- 		require("codeium").setup({})
-	-- 	end,
-	-- }) -- {{{1
+	use({
+		"jcdickinson/codeium.nvim",
+		requires = {
+			"jcdickinson/http.nvim",
+			"nvim-lua/plenary.nvim",
+			"hrsh7th/nvim-cmp",
+		},
+		config = function()
+			require("codeium").setup({})
+		end,
+	}) -- {{{1
 	-- stay in place
 	use({
 		"gbprod/stay-in-place.nvim",
@@ -158,6 +158,11 @@ return packer.startup(function(use)
 			-- Your configuration code here
 		end,
 	})
+	-- colorizer
+	use({
+		"NvChad/nvim-colorizer.lua",
+	})
+
 	-- AI
 
 	--
