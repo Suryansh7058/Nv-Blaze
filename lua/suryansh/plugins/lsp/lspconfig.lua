@@ -17,7 +17,7 @@ if not typescript_setup then
 end
 
 local keymap = vim.keymap -- for conciseness
-
+local utils = require("lspconfig/util")
 -- enable keybinds only for when lsp server available
 local on_attach = function(client, bufnr)
 	-- keybind options
@@ -108,6 +108,19 @@ lspconfig["emmet_ls"].setup({
 	filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
 })
 
+lspconfig["rust_analyzer"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+	filetypes = { "rust" },
+	root_dir = utils.root_pattern("Cargo.toml"),
+	settings = {
+		["rust_analyzer"] = {
+			cargo = {
+				allFeatures = true,
+			},
+		},
+	},
+})
 -- configure lua server (with special settings)
 lspconfig["lua_ls"].setup({
 	capabilities = capabilities,

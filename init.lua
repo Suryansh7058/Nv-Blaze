@@ -24,3 +24,5 @@ require("suryansh.plugins.dashboard")
 require("suryansh.plugins.fold")
 require("suryansh.plugins.noice")
 require("suryansh.plugins.colorizer")
+
+vim.opt.foldmethod = "indent"

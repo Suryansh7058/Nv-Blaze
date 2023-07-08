@@ -16,8 +16,12 @@ local opts = {
 }
 
 vim.cmd("highlight Folded cterm=underline ctermfg=223 ctermbg=none guifg=#FFA500 guibg=none")
-vim.cmd("highlight FoldColumn ctermfg=white ctermbg=black cterm=none gui=none")
+vim.cmd("highlight FoldColumn ctermfg=green ctermbg=black cterm=none gui=none")
 
+vim.g.pretty_fold_mappings = {
+	toggle_fold = "<leader>z",
+	-- other mappings
+}
 -- fold.setup(opts)
 fold.setup({
 	config = {
